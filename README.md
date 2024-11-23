@@ -11,4 +11,6 @@ Student Info
 
 * Student Name: Trần Mạnh Duy
 * Student ID: 22bi13126
+* Student Name: Đinh Vũ Anh
+* Student ID: 22bi13102
 * Student Group ID: Not-for-now
