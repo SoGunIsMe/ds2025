@@ -13,4 +13,4 @@ Student Info
 * Student ID: 22bi13126
 * Student Name: Đinh Vũ Anh
 * Student ID: 22bi13102
-* Student Group ID: Not-for-now
+* Student Group ID: 12
