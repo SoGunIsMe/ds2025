@@ -11,4 +11,4 @@ Student Info
 
 * Student Name: Vu Thanh Long
 * Student ID: BA12-110
-* Student Group ID: 12
+* Student Group ID: 7
