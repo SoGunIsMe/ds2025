@@ -1,0 +1,131 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{tocloft}
+\usepackage{times} % Use Times New Roman font
+\geometry{a4paper, margin=1in}
+
+\title{Architecture of Peer-to-Peer Systems}
+\author{Tran Manh Duy}
+\date{December 23, 2024}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section*{Abstract}
+Peer-to-Peer (P2P) architectures enable decentralized resource sharing and file transfer directly between nodes without the need for central authority. This report analyzes the P2P system architecture, highlighting types, components, routing mechanisms, scalability, and applications.
+
+\section{Introduction}
+Peer-to-Peer (P2P) systems are a fundamental aspect of distributed computing. These systems facilitate data sharing and task distribution among interconnected nodes, eliminating reliance on a centralized server. This report explores their architecture, advantages, and practical uses.
+
+\section{Types of P2P Architectures}
+
+\subsection{Centralized P2P}
+Centralized P2P systems rely on a central server to manage an index of files and peers. Users query the server to locate resources and connect directly for data transfer. Examples include Napster. While efficient for file discovery, centralized systems are prone to single points of failure and legal risks.
+
+\subsection{Decentralized Unstructured P2P}
+Unstructured P2P lacks a defined topology. Nodes locate files using query flooding, broadcasting requests to neighbors. Examples include Gnutella and Kazaa. This model is easy to implement and fault-tolerant but generates significant network traffic and lacks scalability.
+
+\subsection{Decentralized Structured P2P}
+Structured P2P employs systematic organization, typically using Distributed Hash Tables (DHTs). Nodes and data are indexed to enable efficient retrieval. Examples include Chord and Kademlia. These systems offer scalability and efficient file location but are complex to implement.
+
+\section{Key Components of P2P Architecture}
+\begin{itemize}
+    \item \textbf{Peers (Nodes)}: Participants in the network acting as both clients and servers.
+    \item \textbf{Overlay Network}: Logical interconnections among peers.
+    \item \textbf{Routing and Lookup}: Mechanisms for resource discovery, such as DHTs.
+\end{itemize}
+
+\section{Peer-to-Peer Routing}
+
+\subsection{Flooding (Unstructured)}
+Flooding involves broadcasting queries to all neighboring nodes. While suitable for smaller networks, it becomes inefficient at larger scales.
+
+\subsection{DHT-Based Routing (Structured)}
+Structured routing maps keys to specific nodes using hash functions. Examples include:
+\begin{itemize}
+    \item \textbf{Chord}: Employs a circular DHT structure for efficient message routing.
+    \item \textbf{Kademlia}: Utilizes XOR metrics for effective search.
+\end{itemize}
+
+\section{Scalability and Maintenance}
+
+\subsection{Node Joining and Leaving}
+New nodes integrate by updating routing information, while departing nodes redistribute their responsibilities. Structured systems manage these changes effectively.
+
+\subsection{Replication}
+Data replication enhances availability and fault tolerance across nodes.
+
+\section{Hybrid Architectures}
+Hybrid systems combine client-server and P2P features. Central servers may handle metadata while file transfers occur between peers. An example is BitTorrent, which employs tracker servers but also supports DHT-based operations. 
+
+\section{Comparison of Architectures}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Aspect} & \textbf{Centralized} & \textbf{Unstructured} & \textbf{Structured} \\
+\hline
+Search Speed & Fast & Slow & Fast \\
+Scalability & Limited & High & Very High \\
+Fault Tolerance & Low & High & High \\
+Implementation & Simple & Simple & Complex \\
+Overhead & Low & High & Moderate \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Real-World Applications of P2P Architectures}
+\subsection{Centralized}
+Early platforms like Napster for music sharing.
+
+\subsection{Unstructured}
+Networks like Kazaa and LimeWire for file sharing.
+
+\subsection{Structured}
+\begin{itemize}
+    \item \textbf{Distributed Storage Systems}: Platforms like IPFS utilize structured P2P systems to offer decentralized and efficient storage solutions.
+    \item \textbf{Blockchain Networks}: Blockchain platforms such as Ethereum rely on structured P2P networks to maintain ledger consistency and enable smart contracts.
+    \item \textbf{Content Delivery Networks (CDNs)}: Peer-assisted CDNs, such as those used in streaming platforms, utilize P2P technologies to reduce latency and server loads.
+    \item \textbf{Online Gaming}: Multiplayer online games employ P2P systems for real-time communication and resource sharing among players.
+    \item \textbf{File Sharing Protocols}: Applications like BitTorrent revolutionized file sharing by combining structured overlays with unstructured features for efficiency.
+\end{itemize}
+
+\section{Conclusion}
+P2P architectures are crucial for enabling decentralized, scalable, and fault-tolerant systems. By addressing inefficiency and scalability issues, structured and hybrid models pave the way for versatile applications in modern computing.
+
+\begin{thebibliography}{9}
+
+\bibitem{napster_wired}
+"Napster and the history of file-sharing," Wired, \url{https://www.wired.com/}.
+
+\bibitem{gnutella_howstuffworks}
+"How Gnutella Works," HowStuffWorks, \url{https://computer.howstuffworks.com/gnutella.htm}.
+
+\bibitem{chord_paper}
+Chord: "A Scalable Peer-to-Peer Lookup Service for Internet Applications," \url{https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf}.
+
+\bibitem{kademlia_paper}
+Kademlia: "A Peer-to-Peer Information System Based on the XOR Metric," \url{https://link.springer.com/}.
+
+\bibitem{bittorrent_ars}
+"Understanding BitTorrent," Ars Technica, \url{https://arstechnica.com/}.
+
+\bibitem{ipfs_io}
+"InterPlanetary File System (IPFS)," \url{https://ipfs.io/}.
+
+\bibitem{ethereum_whitepaper}
+"Ethereum Whitepaper," Ethereum, \url{https://ethereum.org/en/whitepaper/}.
+
+\bibitem{cloudflare_cdn}
+"Peer-assisted CDNs and Streaming," Cloudflare, \url{https://www.cloudflare.com/learning/cdn/what-is-a-cdn/}.
+
+\end{thebibliography}
+
+\end{document}
