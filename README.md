@@ -5,4 +5,4 @@ Student Info
 
 * Student Name: Le Viet An
 * Student ID: 22BI13009
-* Student Group ID: Unavailable yet
+* Student Group ID: 7
