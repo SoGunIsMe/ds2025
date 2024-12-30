@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} 
+\usepackage{amsmath, amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pgffor}
+\usepackage{geometry}
+\usepackage{tocloft}
+\usepackage{times}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+
+
+
+\geometry{a4paper, top=2cm, bottom=2cm, left=2.5cm, right=2.5cm}
+\renewcommand{\baselinestretch}{1.2}
+\begin{document}
+
+\begin{titlepage}
+\centering
+\includegraphics[width=0.25\textwidth]{3.Logo USTH.png}\\[1cm]
+\textbf{\large University of Science and Technology of Hanoi}\\
+\textbf{\large Information and Communication Technology Department}\\[2cm]
+
+{\LARGE \textbf{DISTRIBUTED SYSTEM}}\\[0.5cm]
+{\LARGE \textbf{MIDTERM REPORT}}\\[1.5cm]
+
+{\Huge \textbf{Peer-to-peer (P2P)}}\\
+{\Huge \textbf{File transferring system}}\\[2cm]
+
+{\Large By Group 7}\\[1cm]
+
+\begin{center}
+    \textbf{Tran Manh Duy - 22BI13126}\\
+    \textbf{Nguyen Thanh Long - BA12-110}\\
+    \textbf{Dinh Vu Anh - 22BI13012}\\
+    \textbf{Pham Ngoc Lam - 22BI13240}\\
+    \textbf{Le Viet An - 22BI13009}\\[1cm]
+\end{center}
+
+\vfill
+
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% all the docs are here
+\input{1-intro.tex}
+\input{2-architecture.tex}
+\input{3-file-transfer-process.tex}
+\input{4-security.tex}
+\input{5-app.tex}
+
+\section{References}
+\begin{itemize}
+    % 1-introduction
+    \item \href{https://www.geeksforgeeks.org/peer-to-peer-p2p-architecture/#what-is-a-peertopeer-p2p-architecture}{geeksforgeeks.org}
+
+    % 2-architecture
+    \item \href{https://example.com/napster}{Napster: The First Peer-to-Peer File Sharing Service.}
+
+    \item \href{https://example.com/gnutella}{Gnutella Protocol Specification. }
+    
+    \item{chord Stoica, I., Morris, R., Karger, D., Kaashoek, M. F., \& Balakrishnan, H. (2001). Chord: A scalable peer-to-peer lookup protocol for internet applications. Proceedings of the 2001 conference on Applications, technologies, architectures, and protocols for computer communications.}
+    
+    \item \href{https://ipfs.io/}{IPFS: The InterPlanetary File System.}
+    
+    \item \href{https://bitcoin.org/bitcoin.pdf}{Nakamoto, S. (2008). Bitcoin: A Peer-to-Peer Electronic Cash System.}
+    
+    \item\href{https://webrtc.org/}{WebRTC: Enabling Real-Time Communications in Browsers.}
+    
+    \item \href{https://example.com/blockchain_p2p}{P2P Networks and Blockchain: Overview and Innovations.}
+
+
+    % 3-transfer process
+    \item \href{https://www.brosix.com/blog/peer-peer-file-transfer/}{Brosix: Peer-to-Peer File Transfer}
+    \item \href{https://www.geeksforgeeks.org/p2p-peer-to-peer-file-sharing/}{GeeksforGeeks: P2P File Sharing}
+    \item \href{https://www.raysync.io/news/everything-you-need-to-know-about-point-to-point-transfer/}{Raysync: Point-to-Point Transfer}
+    \item Andrew S. Tanenbaum, "Computer Networks," 5th Edition.
+    \item BitTorrent Protocol Specification.
+    \item Peer-to-Peer Network Design and Applications.
+
+    % 4-security
+    \item \href{https://www.caplinked.com/blog/is-peer-to-peer-file-sharing-safe/}{Caplinked: How save is Peer-To-Peer File Sharing}
+    \item \href{https://www.itsc.cuhk.edu.hk/it-policies/risks-in-peer-to-peer-file-sharing/}{CUHK-Information Technology Services Centre: Risk in Peer-To-Peer File Sharing}
+    \item \href{https://www.securedocs.com/blog/2013/02/peer-to-peer-p2p-file-sharing-risks}{SecureDocs: Peer-To-Peer (P2P) File Sharing Risks}
+
+    
+\end{itemize}
+
+\end{document}

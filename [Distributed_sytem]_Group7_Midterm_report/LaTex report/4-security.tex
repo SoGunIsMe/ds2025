@@ -1,0 +1,34 @@
+\section{Security Challenges}
+
+\subsection{Overview}
+Peer-to-peer (P2P) file sharing has revolutionized the way data is distributed by enabling direct file transfers between users without reliance on central servers. However, the decentralized nature of P2P networks also presents significant security risks and operational challenges.
+
+\vspace{1em}
+\noindent Security concerns include data corruption, malware distribution, and privacy risks due to unencrypted exchanges. Operationally, P2P networks face bandwidth strain, network instability, and difficulties in scaling effectively. They are also often associated with legal and ethical issues like copyright infringement.
+
+\subsection{Security Issues in Peer-To-Peer File Sharing}
+
+\begin{itemize}
+    \item \textbf{Malware, Spyware and Viruses}: Since P2P networks allow direct sharing between users, files shared within the network may contain malware or viruses. These types of malicious software can cause all sorts of havoc, including bringing down your entire network. 
+    \item \textbf{Data Integrity and Corruption}: Without a central authority to validate files, there is a risk of data corruption or unauthorized alterations. Users may unknowingly download corrupted files or altered versions of original files.
+    \item \textbf{Privacy Risks}: Many P2P systems lack encryption for the files being exchanged. This exposes sensitive data to potential eavesdropping or interception. Users may unknowingly share personal or confidential information if the network is not adequately protected.
+    \item \textbf{Insecurity File Transfer}: In some cases, P2P users may not be fully anonymous. IP addresses and activity logs can be traced back to users, leading to privacy breaches and potential legal consequences.
+\end{itemize}
+
+\subsection{Operational Challenges}
+
+\begin{itemize}
+    \item \textbf{Network Instability}: P2P networks often rely on user nodes that may join or leave at any time, causing fluctuations in the network’s availability and reliability. This can affect the quality and speed of file sharing.
+    \item \textbf{Scalability}: As the network grows in size, managing the increasing number of peers and ensuring efficient file distribution becomes more difficult. P2P systems may face issues in scaling efficiently, leading to slower file sharing and connectivity problems.
+    \item \textbf{Bandwidth Strain}: P2P networks often require users to share their internet bandwidth, which can lead to congestion and slow speeds, especially for users with limited bandwidth. This could affect the overall user experience.
+    \item \textbf{Legal and Ethical Issues}: P2P networks are often used for sharing copyrighted content without authorization, leading to legal challenges. Copyright infringement lawsuits and ethical debates about file sharing in the context of intellectual property can complicate the use of P2P systems.
+\end{itemize}
+
+\subsection{Solutions and Mitigations}
+\begin{itemize}
+    \item \textbf{Encryption and Secure Protocols}: Implementing encryption at both the file and transport levels can mitigate the risks of data interception and malware. Protocols like TLS or SSL can be used to ensure the privacy and integrity of file transfers.
+    \item \textbf{Authentication and Trust Models}: Introducing methods of verifying the identity of peers, such as digital signatures or reputation systems, can help prevent malicious actors from exploiting the network. Users can be rated or verified, increasing trust in the file-sharing process.
+    \item \textbf{Legal Compliance and Content Filtering}: To avoid legal issues, some P2P networks implement content filtering and compliance with copyright laws, preventing the sharing of pirated content. This approach can help protect users from lawsuits and reduce the legal risk associated with file sharing.
+    \item \textbf{Improved Network Protocols}: Enhancing network protocols to handle dynamic nodes more effectively and ensure more reliable peer discovery and file retrieval is crucial for overcoming scalability and stability challenges.
+\end{itemize}
+

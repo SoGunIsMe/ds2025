@@ -1,0 +1,32 @@
+\section{Key Components of P2P Architecture}
+
+\begin{itemize}
+    \item \textbf{Peers (Nodes):} Each participant in the network functions as both a client and a server, contributing to resource sharing and data exchange. Nodes may have varying capabilities, ranging from personal devices to powerful servers. Dynamic peer behavior, including node churn, poses challenges in maintaining stability and consistency.
+    \item \textbf{Overlay Network:} The logical structure connecting peers determines routing efficiency and network performance. Overlay types include ring, mesh, and hierarchical topologies. The design of the overlay network significantly impacts the network's scalability and fault tolerance. Advanced overlays integrate fault-tolerant mechanisms and self-healing properties to maintain robustness.
+    \item \textbf{Routing and Lookup:} Mechanisms like DHTs and flooding ensure effective resource discovery and data transfer between peers. Efficient routing minimizes latency and enhances scalability. Lookup protocols must handle dynamic changes in the network, such as node churn, to maintain reliability. Techniques like proximity-aware routing further optimize network performance.
+\end{itemize}
+
+\subsection{Peer-to-Peer Routing}
+
+\subsubsection{Flooding (Unstructured)}
+Flooding is a straightforward routing method where nodes broadcast queries to all their neighbors. This approach ensures that resources are located, but it generates excessive network traffic and scales poorly.
+
+To improve efficiency, techniques such as Time-To-Live (TTL) and query limits are often employed. These strategies reduce redundant transmissions while maintaining high availability. Flooding remains a practical approach for small networks or where query latency is not a critical concern. Recent studies suggest hybrid flooding mechanisms that combine controlled broadcast with selective query forwarding to enhance scalability.
+
+\subsubsection{DHT-Based Routing (Structured)}
+DHT-based routing maps keys to specific nodes using hash functions, enabling deterministic and efficient resource discovery. Systems like Chord employ circular DHTs, while Kademlia uses XOR-based distance metrics for routing.
+
+These methods enhance scalability by ensuring logarithmic time complexity for resource lookups. However, maintaining DHT consistency requires sophisticated algorithms to handle dynamic node join/leave events. The use of replication and caching further improves the performance and fault tolerance of DHT-based systems. Innovations in decentralized load balancing and proximity-aware replication add further robustness.
+
+\subsection{Scalability and Maintenance}
+
+\subsubsection{Node Joining and Leaving}
+Structured P2P systems dynamically adapt to changes by redistributing resources and updating routing tables. This minimizes disruption and maintains overall network efficiency. Protocols like Chord and Pastry implement mechanisms to reassign node responsibilities seamlessly during such transitions.
+
+Unstructured systems, while less organized, handle churn rates effectively due to their redundant connections, albeit at the cost of higher overhead. Techniques like neighbor caching and backup paths enhance resilience against frequent node departures. Research into adaptive algorithms for churn management aims to further optimize these systems.
+
+\subsubsection{Replication}
+Replication ensures data availability and fault tolerance by duplicating resources across multiple nodes. This strategy is crucial for mitigating the impact of node failures or network disruptions.
+
+Replication policies, such as full and partial replication, balance storage costs and performance based on application requirements. Additionally, adaptive replication schemes respond to network conditions, ensuring optimal resource distribution and availability. Real-time replication techniques enhance the reliability of mission-critical applications.
+
