@@ -2,7 +2,6 @@ USTH 2025: DISTRIBUTED SYSTEM
 
 Student Info
 =========================
-
-* Student Name: Le Viet An
-* Student ID: 22BI13009
+* Student Name: Trần Mạnh Duy
+* Student ID: 22bi13126
 * Student Group ID: 7
